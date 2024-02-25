@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed deposit </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="head">Interest Calculator</h1>
+    <div id="wrapper">
+        <h2>Rate Calculator</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Tenure">
+        </div>
+        <div>
+            <button type="submit" onclick="fdcon()">Convert</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        function fdcon(){
+            let a = Number(document.getElementById("input").value);
+            let rate = 0;
+
+            if(a<3)
+             rate=5.8
+            else if(a>=3 && a<=6)
+             rate=6.5
+            else if(a>=7 && a<=9)
+             rate=6.8
+            else
+             rate=7
+             
+            let result=document.getElementById("result");
+            result.innerHTML = "Your interest rate is " + rate + "%"
+        }
+    </script>
+    
+</body>
+</html>
